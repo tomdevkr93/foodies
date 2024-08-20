@@ -1,3 +1,12 @@
+export interface MealInput {
+  title: string;
+  summary: string;
+  instructions: string;
+  creator: string;
+  creator_email: string;
+  image: File;
+  slug?: string; // optional, as it's generated in the function
+}
 export default interface Meal {
   title: string;
   slug: string;

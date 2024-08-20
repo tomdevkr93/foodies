@@ -1,4 +1,4 @@
-import Meal, { dummyMeals } from '@/src/model/Meal';
+import Meal, { dummyMeals, MealInput } from '@/src/model/Meal';
 import slugify from 'slugify';
 import xss from 'xss';
 import fs from 'node:fs';
@@ -14,7 +14,7 @@ export async function getMeal(slug: string): Promise<Meal | null> {
   return resultMeal ?? null;
 }
 
-export async function saveMeal(meal: any) {
+export async function saveMeal(meal: MealInput) {
   meal.slug = slugify(meal.title, { lower: true, strict: false });
   meal.instructions = xss(meal.instructions);
 
@@ -30,6 +30,11 @@ export async function saveMeal(meal: any) {
     }
   });
 
-  meal.image = `/images/${fileName}`;
-  dummyMeals.push(meal);
+  const savedMeal: Meal = {
+    ...meal,
+    image: `/images/${fileName}`,
+    slug: meal.slug,
+  };
+
+  dummyMeals.push(savedMeal);
 }
