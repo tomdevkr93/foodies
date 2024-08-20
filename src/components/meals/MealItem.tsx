@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import styles from './mealItem.module.css';
-import { Meal } from '@/src/model/Meal';
+import Meal from '@/src/model/Meal';
 
 export default function MealItem({
   image,

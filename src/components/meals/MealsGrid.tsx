@@ -1,4 +1,4 @@
-import { Meal } from '@/src/model/Meal';
+import Meal from '@/src/model/Meal';
 import MealItem from './MealItem';
 import styles from './MealsGrid.module.css';
 
