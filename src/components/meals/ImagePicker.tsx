@@ -9,7 +9,7 @@ type Props = {
 };
 
 export default function ImagePicker({ label, name }: Props) {
-  const [pickedImage, setPickedImage] = useState<string>('');
+  const [pickedImage, setPickedImage] = useState<string | null>(null);
   const imageInputRef = useRef<HTMLInputElement>(null);
 
   function onClickPickerButton() {
@@ -19,6 +19,7 @@ export default function ImagePicker({ label, name }: Props) {
   function onChangeInputImage(event: ChangeEvent<HTMLInputElement>) {
     const file = event.target.files?.[0];
     if (!file) {
+      setPickedImage(null);
       return;
     }
 
@@ -55,6 +56,7 @@ export default function ImagePicker({ label, name }: Props) {
           accept="image/png, image/jpeg"
           ref={imageInputRef}
           onChange={onChangeInputImage}
+          required
         />
         <button
           className={styles.button}
