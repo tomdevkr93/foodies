@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Foodies
 
-## Getting Started
+Foodies는 Next.js 14 + TypeScript로 [udemy 강좌](https://www.udemy.com/course/nextjs-react-incl-two-paths/?couponCode=SKILLS4SALEB) 를 참고하여 클론 코딩한 요리 레시피 공유 플랫폼입니다. 사용자들이 자신의 favorite 레시피를 공유하고, 다른 사람들의 레시피를 발견할 수 있는 커뮤니티 중심의 웹 애플리케이션입니다.<br /><br />
 
-First, run the development server:
+<img src="https://github.com/user-attachments/assets/a541bcc7-6be7-46d5-ac91-75fa8c322663" height="360" />
+<img src="https://github.com/user-attachments/assets/0c0a4a0d-ea9d-4fc8-b8f0-e2d0ad2739f4" height="360" />
+<img src="https://github.com/user-attachments/assets/2c19821e-bd5d-4cdd-9a8a-c46fc475723b" height="360" />
+<img src="https://github.com/user-attachments/assets/ba99b76b-1ed8-4ef1-b8d1-d1ffbe64daf6" height="360" />
+<img src="https://github.com/user-attachments/assets/c3e274af-40ea-4672-a3b6-076c352e8ff4" height="360" />
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 주요 기능
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 레시피 공유 및 탐색
+- 사용자 커뮤니티
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 기술 스택
 
-## Learn More
+- [Next.js 14](https://nextjs.org/)
+  - 사전 렌더링, SSR, 데이터 불러오기, 파일 기반 라우팅, 서버 액션을 통해 데이터 제출, 서버 컴포넌트, 클라이언트 컴포넌트 
+- [TypeScript](https://www.typescriptlang.org/)
+- [React](https://reactjs.org/)
 
-To learn more about Next.js, take a look at the following resources:
+## 시작하기
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+이 프로젝트를 로컬 환경에서 실행하려면 다음 단계를 따르세요:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. 저장소 클론
 
-## Deploy on Vercel
+   ```
+   git clone https://github.com/tomdevkr93/foodies.git
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. 디렉토리 이동
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```
+   cd foodies
+   ```
+
+3. 의존성 설치
+
+   ```
+   yarn install
+   ```
+
+4. 개발 서버 실행
+
+   ```
+   yarn dev
+   ```
+
+5. 브라우저에서 `http://localhost:3000`으로 접속
