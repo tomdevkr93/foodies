@@ -3,6 +3,7 @@ import styles from './page.module.css';
 import MealsGrid from '@/src/components/meals/MealsGrid';
 import { getMeals } from '../lib/meals';
 import { Suspense } from 'react';
+import { Metadata } from 'next';
 
 async function Meals() {
   const meals = await getMeals();
